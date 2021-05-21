@@ -1,0 +1,123 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+{% if player.treat in Constants.odd %}
+
+<h2 align="center"><b>{{ player.name_PO }}'s Tasks</b></h2>
+
+{% else %}
+
+<h2 align="center">The Tasks</h2>
+
+{% endif %}
+
+{% if player.random == 0 %}
+
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <td align="center" colspan="2"><h6><b>Feeder 2000</b></h6></td>
+            <td align="center" colspan="2"><h6><b>Robofer</b></h6></td>
+        </tr>
+    </thead>
+        <tr>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-4: 10% <br/>
+            Years 5-7: 0%</td>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-3: 15% <br/>
+            Years 4-5: -5% <br/>
+            Years 6-7: -12% </td>
+        </tr>
+        <tr>
+            <td><b>Royalty Rate:</b></td>
+            <td>10%</td>
+            <td><b>Royalty Rate:</b></td>
+            <td>Years 1-3: 12% <br/>
+            Years 4-5: 9% <br/>
+            Years 6-7: 7%</td>
+        </tr>
+</table>
+
+<div class="instructions"><p>Below you have to indicate with what task you would like to start with. It is important
+    to know that you can only switch once from one to the other tasks within the {% if player.treat > 2 %}12{% else %}8{% endif %} minutes. Thus, if you switch
+    to the other task, you cannot return to the task that you started with. The switch you can make at any time during
+    the {% if player.treat > 2 %}12{% else %}8{% endif %} minutes. {% if player.treat > 2 %}<i>12 minutes should be sufficient to finish both tasks.</i>{% endif %} </p></div>
+<hr>
+
+<p align = "center"><b>Which task would you like to start with?</b></p>
+
+    <div align="center">
+        <button name="task_choice" value="True" class="btn btn-primary btn-large">Feeder 2000</button>
+        <button name="task_choice" value="False" class="btn btn-primary btn-large">Robofer</button>
+    </div>
+
+<hr>
+
+{% else %}
+
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <td align="center" colspan="2"><h6><b>Robofer</b></h6></td>
+            <td align="center" colspan="2"><h6><b>Feeder 2000</b></h6></td>
+        </tr>
+    </thead>
+        <tr>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-3: 15% <br/>
+            Years 4-5: -5% <br/>
+            Years 6-7: -12% </td>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-4: 10% <br/>
+            Years 5-7: 0%</td>
+        </tr>
+        <tr>
+            <td><b>Royalty Rate:</b></td>
+            <td>Years 1-3: 12% <br/>
+            Years 4-5: 9% <br/>
+            Years 6-7: 7%</td>
+            <td><b>Royalty Rate:</b></td>
+            <td>10%</td>
+        </tr>
+</table>
+<br/>
+<div class="instructions"><p>Below you have to indicate with what task you would like to start with. It is important
+    to know that you can only switch once from one to the other tasks within the {% if player.treat > 2 %}12{% else %}8{% endif %} minutes. Thus, if you switch
+    to the other task, you cannot return to the task that you started with. The switch you can make at any time during
+    the {% if player.treat > 2 %}12{% else %}8{% endif %} minutes. {% if player.treat > 2 %}<i>12 minutes should be sufficient to finish both tasks.</i>{% endif %} </p></div>
+
+<hr>
+
+<p align = "center"><b>Which task would you like to start with?</b></p>
+
+    <div align="center">
+        <button name="task_choice" value="False" class="btn btn-primary btn-large">Robofer</button>
+        <button name="task_choice" value="True" class="btn btn-primary btn-large">Feeder 2000</button>
+    </div>
+
+<hr>
+
+{% endif %}
+
+    <h3 align="center">Documentation{% if player.treat in Constants.odd %} by {{ player.name_PO }}{% endif %}:</h3> <p align="center">{{ player.documentatie }}</p>
+
+{% endblock %}

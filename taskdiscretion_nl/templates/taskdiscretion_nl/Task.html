@@ -1,0 +1,69 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p> Het is jouw taak om te verifiëren dat de twee DCF modellen een rekenkundig juiste fair value estimate produceren
+    gegeven de inputs van Agrifirm. Omdat de DCF modellen Information Provided by Entity (IPE) zijn, zal er
+    gekeken moeten worden of de DCF modellen die door Agrifirm gebruikt worden een accurate en betrouwbare output geven.
+    {% if player.treat in Constants.odd %}Deze taken worden binnen het audit team beschouwd als jouw bijdrage aan deze
+    audit engagement. {% else %}Deze audit taken worden binnen het audit team beschouwd als een onderdeel van de audit
+    engagement.{% endif %}
+</p>
+
+    <p> Onderdeel van deze taken is om te documenteren waarom deze patenten tegen fair value worden
+    gewaardeerd. Deze documentatie zal deel uitmaken van beide audit taken en bij deze taken worden gevoegd.
+    {% if player.treat in Constants.odd %}
+    De audit teamleider geeft jou alle vrijheid en geeft jou de keuze om dit te documenteren zoals jij dat het beste
+    acht. Door op de rode knop te klikken kan je nog eens de figuur bekijken die deze transactie omschrijft.
+    {% else %}De audit
+    teamleider heeft zelf een beredenering opgesteld en stelt voor dat jij deze letterlijk en volledig overneemt. Deze
+    documentatie is als volgt:<i> "Door een overname die Agrifirm heeft gedaan, is Agrifirm in het bezit gekomen van
+    twee patenten. Deze patenten geven Agrifirm het recht om andere partijen uit te sluiten van commerciële exploitatie
+    van de machines. Agrifirm exploiteert deze patenten echter niet zelf maar heeft een overeenkomst met een derde
+    partij, CMG Machines. Deze overeenkomst geeft CMG Machines het exclusieve recht om de machines te produceren en te
+    gebruiken. CMG Machines betaalt royaltybetalingen gebaseerd op de machine-specifieke omzet aan Agrifirm, derhalve
+    kan Agrifirm deze waarderen tegen reële waarde. - John Jansen, Manager Roger & Johnson"</i>{% endif %}
+    </p>
+
+    {% if player.treat in Constants.odd %}
+    <p>Gelieve hieronder jouw documentatie toe te voegen:</p>
+    {% else %}
+    <p>Gelieve hieronder de beredenering van de teamleider over te nemen:</p>
+    {% endif %}
+
+    {% formfield player.documentatie %}
+
+    {% if player.treat in Constants.odd %} Documentatie opgesteld door: {{ player.name_PO }} {% endif %}
+
+
+
+    {% next_button %}
+
+{% if player.treat in Constants.odd %}
+<input type="hidden" name="summary_figure" value="" id="id_summary_figure"/>
+
+<div class="container">
+  <button style="color: rgb(255,255,255); background-color: rgb(255,3,0); border-color: rgb(255,3,0)" type="button" class="btn btn-info" data-toggle="collapse" id="buttons" data-target="#demo">Klik hier om een overzicht van de transactie te bekijken.</button>
+  <div id="demo" class="collapse">
+      <div align="center">
+            <img height="420" src="{% static 'flowchart_experiment_nl.png' %}"/>
+      </div>
+  </div>
+</div>
+  <br/>
+    <hr>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#buttons').click(function() {
+            $('#id_summary_figure').val(1);
+        });
+    </script>
+{% endblock %}

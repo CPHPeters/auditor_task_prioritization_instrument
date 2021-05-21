@@ -1,0 +1,58 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Introductie
+{% endblock %}
+
+{% block content %}
+<div class="instructions">
+<p> Hartelijk dank voor jouw participatie aan deze studie. Deze studie maakt deel uit van het onderzoeksprogramma van het Departement
+    Accountancy aan de Universiteit van Tilburg. Door mee te doen aan deze studie, draag je bij aan het onderzoeksprogramma en
+    aan auditing onderzoek in Nederland. Met dit onderzoek hopen we meer inzicht te krijgen in de keuzes en besluitvorming van
+    auditors.</p>
+    <br/>
+    <p> Gedurende deze studie zul je gevraagd worden om enkele taken te volbrengen. De studie zal ongeveer <b>30 minuten</b>.
+        duren. Na afloop van de studie zul je een e-mail ontvangen waarin je <b>€10,-</b> naar je rekening kunt laten overschrijven.</p> <br/>
+    <ul>
+        <li>
+            We verzoeken je om alle informatie zorgvuldig door te lezen en wees er van op de hoogte dat je niet terug kunt gaan naar vorige schermen.
+        </li>
+        <li>
+            Gedurende de studie is het belangrijk dat je op geen enkele manier communiceert met andere PMA-studenten of naar hun beeldschermen kijkt.
+        </li>
+        <li>
+            De data in deze studie zullen enkel voor het huidige onderzoek worden gebruikt. De data die in deze studie
+            wordt verzameld zal met niemand buiten het onderzoeksteam worden gedeeld.
+        </li>
+        <li>
+            In deze studie zal er geen sprake zijn van psychologisch ongemak, fysiek ongemak, of misleiding.
+        </li>
+        <li>
+            Deelname aan deze studie is compleet vrijwillig en het is te allen tijden toegestaan om het experiment te
+            beëindigen. Dit kan op ieder moment door het venster te sluiten. Door het experiment vroegtijdig te beëindigen
+            verlies je wel je recht op betaling.
+        </li>
+        <li>
+            Gedurende deze studie zul je audit taken voor een hypothetisch bedrijf moeten doen, informatie in deze studie
+            is fictief en enige gelijkenissen met echte bedrijven berusten louter op toeval. Je wordt verzocht om de
+            taken in deze studie te doen zoals je deze in een daadwerkelijke audit zou doen. Baseer je daarbij op de informatie
+            gegeven in de casus.
+        </li>
+    </ul>
+
+</div>
+
+    <br/>
+        {% formfield player.name_PO %}
+    <br/>
+
+{% formfield player.accept_conditions label="<b>Ik begrijp bovenstaande condities en accepteer deze.</b>" %}
+
+<br/>
+
+<button class="btn btn-primary btn-large">
+    Ja, ik neem deel aan deze studie.
+</button>
+
+{% endblock %}

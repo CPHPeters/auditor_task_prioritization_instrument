@@ -1,0 +1,27 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="text-align:center">
+        Gelieve de onderstaande vragen te beantwoorden op basis van jouw ervaringen en gevoelens toen je de audit taken
+        uitvoerde. De audit taken verwijzen hier specifiek naar de IPE werkzaamheden van de Robofer en Feeder 2000
+        patenten.
+</div>
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            <td>{{ field }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<hr/>
+
+    {% next_button %}
+
+{% endblock %}

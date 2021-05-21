@@ -1,0 +1,37 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Context
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <p>
+        You are an auditor and your audit firm Rogers & Johnson is engaged to perform the annual audit of Agrifirm for
+        the fiscal year ending December 31, 2018. Agrifirm is a public, international firm that operates in the
+        agriculture industry and specializes in animal feed production. Your firm has audited Agrifirm for the past
+        three years.
+
+        In the current audit engagement, the
+        engagement partner has given you the responsibility for auditing two fair value estimates of patents that belong
+        to Agrifirm. Next to the audit of these two fair value estimates, you also work on several other audits.
+        <br/>
+        <br/>
+        {% if player.treat in Constants.odd %}You work in an audit team where your control over the audit tasks is seen as
+        important. At the end of audit engagements in this team, your contribution truly feels as your work.{% else %}
+        You work in an audit team where your control over the audit tasks is seen as totally unimportant. At the end of
+        audit engagements in this team, your contribution does not feel as your work.{% endif %}
+
+        {% if player.treat in Constants.odd %}During evaluations of audit engagements with this team leader, a lot of
+        attention is paid to the extent to which you have control over the tasks.{% else %}During evaluations of audit
+        engagements with this team leader, no attention is paid to the extent to which you have control over the tasks.
+        {% endif %}
+    </p>
+
+</div>
+
+    {% next_button %}
+
+{% endblock %}

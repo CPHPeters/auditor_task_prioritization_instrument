@@ -1,0 +1,22 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Laatste Stappen
+{% endblock %}
+
+{% block content %}
+
+<p> De studie is bijna afgelopen. Twee kleine zaken moeten nog worden gedaan: een test van je rekenkundige vaardigheid
+    en het invullen van wat demografische informatie zoals leeftijd en geslacht. </p>
+
+<hr>
+<div align="center">
+    <p><b>Waarmee zou je willen beginnen?</b></p>
+
+    <button name="orderDemographics" value="True" class="btn btn-primary btn-large">Demografische Informatie</button>
+    <button name="orderDemographics" value="False" class="btn btn-primary btn-large">Rekenkundige Vaardigheden</button>
+</div>
+<hr>
+
+{% endblock %}

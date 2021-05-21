@@ -1,0 +1,98 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="instructions">
+        <b>Below you can find the DCF models used by Agrifirm. As described on the previous page, you have {% if player.treat > 2 %}five{% else %}three{% endif %} minutes
+            to make yourself familiar with these DCF models. By double-clicking in a cell, you can alter the formula
+            in the cell. If you cannot see the spreadsheets of the client, you can click on the red button at the bottom
+            of the page. </b>
+    </div>
+
+    <br/>
+
+{% if player.random == 1 %}
+
+<div>
+        <p><b>DCF model used for the audit of the Robofer Patent</b></p>
+        <div align="center" style="margin-left: -11%;">
+            <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216025&authkey=%21AOhPUDKnp0Jw1DY&em=2&AllowTyping=True&ActiveCell='Audit of Robofer Patent'!A1&Item='Audit of Robofer Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+        </div>
+    <br/>
+        <p><b>DCF model used for the audit of the Feeder 2000 Patent</b></p>
+        <div align="center" style="margin-left: -11%;">
+            <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216019&authkey=%21AD50TnPRuCB2A3E&em=2&AllowTyping=True&ActiveCell='Audit of the Feeder 2000 Patent'!A1&Item='Audit of the Feeder 2000 Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+        </div>
+</div>
+
+{% else %}
+
+<div>
+        <p><b>DCF model used for the audit of the Feeder 2000 Patent</b></p>
+        <div align="center" style="margin-left: -11%;">
+            <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216019&authkey=%21AD50TnPRuCB2A3E&em=2&AllowTyping=True&ActiveCell='Audit of the Feeder 2000 Patent'!A1&Item='Audit of the Feeder 2000 Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+        </div>
+    <br/>
+        <p><b>DCF model used for the audit of the Robofer Patent</b></p>
+        <div align="center" style="margin-left: -11%;">
+            <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216025&authkey=%21AOhPUDKnp0Jw1DY&em=2&AllowTyping=True&ActiveCell='Audit of Robofer Patent'!A1&Item='Audit of Robofer Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+        </div>
+</div>
+
+{% endif %}
+
+    {% next_button %}
+
+<input type="hidden" name="screenshot_training" value="" id="id_screenshot_training"/>
+
+<div class="container">
+  <button style="color: rgb(255,255,255); background-color: rgb(255,3,0); border-color: rgb(255,3,0)" type="button" class="btn btn-info" data-toggle="collapse" id="buttont" data-target="#demo">Click here if you are unable to view the spreadsheets.</button>
+  <div id="demo" class="collapse">
+    <p>
+        <b>Audit of the Feeder 2000 Patent</b>
+    </p>
+      <div align="center">
+            <img width="125%" src="{% static 'Feeder_train.png' %}"/>
+      </div>
+    <p>
+        <b>Audit of the Robofer Patent</b>
+    </p>
+      <div align="center">
+            <img width="125%" src="{% static 'Robofer_train.png' %}"/>
+      </div>
+  </div>
+</div>
+  <br/>
+    <hr>
+
+{% endblock %}
+
+{% block app_styles %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#buttont').click(function() {
+            $('#id_screenshot_training').val(1);
+        });
+    </script>
+
+        {% if player.treat > 2 %}
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 60) {
+                    $('.otree-timer').show();
+                }
+            });
+        });
+    </script>
+    {% endif %}
+
+{% endblock %}

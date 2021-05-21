@@ -1,0 +1,22 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Last Things
+{% endblock %}
+
+{% block content %}
+
+<p> The study is almost finished. Two small tasks need to be conducted: a task assessing your mathematical skills
+    and filling in demographic information such as your age and gender. </p>
+
+<hr>
+<div align="center">
+    <p><b>What task would you like to start with?</b></p>
+
+    <button name="orderDemographics" value="True" class="btn btn-primary btn-large">Demographic Information</button>
+    <button name="orderDemographics" value="False" class="btn btn-primary btn-large">Mathematical Skills</button>
+</div>
+<hr>
+
+{% endblock %}

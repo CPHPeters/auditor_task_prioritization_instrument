@@ -1,0 +1,27 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="text-align:center">
+        Hieronder staan een aantal persoonlijkheidskenmerken die wel of niet van jou op toepassing kunnen zijn.  Je wordt verzocht
+        om voor elke statement te evalueren in welke mate het tweetal persoonlijkheidskenmerken op jou van toepassing is,
+        ook als een kenmerk sterker van toepassing is dan de ander.
+</div>
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            <td>{{ field }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<hr/>
+
+    {% next_button %}
+
+{% endblock %}

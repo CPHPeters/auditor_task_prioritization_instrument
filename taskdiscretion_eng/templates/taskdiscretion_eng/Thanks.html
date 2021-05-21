@@ -1,0 +1,21 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Thank you very much for your participation!
+{% endblock %}
+
+{% block content %}
+
+<p>We would like to thank you very much for participating in this experiment. By participating, you contribute to
+    auditing research at Tilburg University. Within one week, you will receive an e-mail in which you are asked
+    to provide payment details to which we can transfer the amount. After filling in your payment details, the amount
+    will be transferred to your account within three weeks. </p>
+
+{% formfields %}
+
+<button class="btn btn-primary btn-large">
+    Finish Study
+</button>
+
+{% endblock %}

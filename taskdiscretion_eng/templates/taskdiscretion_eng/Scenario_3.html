@@ -1,0 +1,32 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p>
+    Agrifirm calculated the fair value estimates by using a Discounted Cash Flow (DCF) model. The
+    engagement partner and Agrifirm's CFO agrees that the DCF model is the most applicable model. Agrifirm
+    receives royalty payments, these are cash flows calculated as the royaltypercentage times
+    the machine-specific revenues of CMG Machines. Agrifirm values the patent by using the net present value
+    of these royalty payments. The Discounted Cash Flow model is calculated as follows:
+    <br/>
+    <br/>
+    DCF = CF<sub>1</sub>/(1+r)<sup>1</sup> + CF<sub>2</sub>/(1+r)<sup>2</sup> + CF<sub>3</sub>/(1+r)<sup>3</sup> + ... + CF<sub>n</sub>/(1+r)<sup>n</sup>
+    <br/>
+    <br/>
+    where CF are the royalty payments and r is the discount rate.
+</p>
+
+<div class="instructions">
+    <p><b>Two questions about DCF models:</b></p>
+    {% formfield player.cq1 %}
+    {% formfield player.cq2 %}
+</div>
+
+    {% next_button %}
+
+
+{% endblock %}

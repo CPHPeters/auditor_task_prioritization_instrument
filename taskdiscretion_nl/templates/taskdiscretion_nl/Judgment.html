@@ -1,0 +1,160 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p>Ondanks dat de audit van het Feeder 2000 en het Robofer patent veel op elkaar lijken, zijn de taken verschillend van
+    elkaar met betrekking to de inputs van het model. Het Robofer patent heeft meer inputs omdat het groeipercentage en
+    het royaltypercentage variëren gedurende verschillende periodes van het patent. Zie onderstaand de tabel. </p>
+
+{% if player.treat in Constants.odd %}
+
+<h2 align="center"><b>{{ player.name_PO }}'s Taken</b></h2>
+
+{% else %}
+
+    <h2 align="center">De Taken</h2>
+
+{% endif %}
+
+{% if player.random == 0 %}
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <td align="center" colspan="2"><h6><b>Feeder 2000</b></h6></td>
+            <td align="center" colspan="2"><h6><b>Robofer</b></h6></td>
+        </tr>
+    </thead>
+        <tr>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-4: 10% <br/>
+            Years 5-7: 0%</td>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-3: 15% <br/>
+            Years 4-5: -5% <br/>
+            Years 6-7: -12% </td>
+        </tr>
+        <tr>
+            <td><b>Royalty Rate:</b></td>
+            <td>10%</td>
+            <td><b>Royalty Rate:</b></td>
+            <td>Years 1-3: 12% <br/>
+            Years 4-5: 9% <br/>
+            Years 6-7: 7%</td>
+        </tr>
+
+    <hr>
+
+        <!-- DO NOT FORGET TO CONTROL FOR DIRECTION DUE TO ORDER RANDOMIZATION -->
+<div class="instructions">
+    <p><b>Geef aan welke audit jij als moeilijker beoordeelt door de slider te bewegen maar de audit die jij het
+        moeilijkste beoordeelt. Hoe meer je de slider naar het uiteinde van de lijn verplaatst, hoe moeilijker je deze
+        audit beoordeelt ten opzichte van de andere audit.</b></p>
+
+    <div align="center">
+            <table align="center">
+    <thead>
+        <tr>
+            <td align="left" colspan="2" width="500px"><h3><b>Feeder 2000</b></h3></td>
+            <td align="right" colspan="2" width="250px"><h3><b>Robofer</b></h3></td>
+        </tr>
+    </thead>
+        </table>
+    <br/>
+    <div align="center">
+        {% formfield player.difficulty_slider label=None %}
+    </div>
+    </div>
+
+</div>
+
+</table>
+{% else %}
+
+<table border="1" align="center">
+    <thead>
+        <tr>
+            <td align="center" colspan="2"><h6><b>Robofer</b></h6></td>
+            <td align="center" colspan="2"><h6><b>Feeder 2000</b></h6></td>
+        </tr>
+    </thead>
+        <tr>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+            <td><b>Discount Rate:</b></td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-3: 15% <br/>
+            Years 4-5: -5% <br/>
+            Years 6-7: -12% </td>
+            <td><b>Growth Rate:</b></td>
+            <td>Years 1-4: 10% <br/>
+            Years 5-7: 0%</td>
+        </tr>
+        <tr>
+            <td><b>Royalty Rate:</b></td>
+            <td>Years 1-3: 12% <br/>
+            Years 4-5: 9% <br/>
+            Years 6-7: 7%</td>
+            <td><b>Royalty Rate:</b></td>
+            <td>10%</td>
+        </tr>
+
+</table>
+
+    <hr>
+
+    <!-- DO NOT FORGET TO CONTROL FOR DIRECTION DUE TO ORDER RANDOMIZATION -->
+<div class="instructions">
+    <p><b>Geef aan welke audit jij als moeilijker beoordeelt door de slider te bewegen maar de audit die jij het
+        moeilijkste beoordeelt. Hoe meer je de slider naar het uiteinde van de lijn verplaatst, hoe moeilijker je deze
+        audit beoordeelt ten opzichte van de andere audit.</b></p>
+
+    <div align="center">
+            <table align="center">
+    <thead>
+        <tr>
+            <td align="left" colspan="2" width="500px"><h3><b>Robofer</b></h3></td>
+            <td align="right" colspan="2" width="250px"><h3><b>Feeder 2000</b></h3></td>
+        </tr>
+    </thead>
+        </table>
+    {% formfield player.difficulty_slider label=None %}
+    </div>
+
+</div>
+
+{% endif %}
+
+<hr>
+
+    <h3 align="center">Documentatie:</h3><p align="center">{{ player.documentatie }}</p>
+
+<hr>
+<div align="center">
+{% next_button %}
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script>
+        $('input[name=difficulty_slider]').on('input', function() {
+            document.getElementById("demo1").innerHTML = $(this).val()+'<span style="color: rgb(0,123,255);">%</span>';
+        });
+    </script>
+
+{% endblock %}
+

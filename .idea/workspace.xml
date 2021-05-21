@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="96b85b20-8778-4837-b424-5a575e5ef666" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/_builtin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/pages.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/After_Audit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Big_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Choice.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Demographics_P1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Demographics_P2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Feeder_2000_P1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Feeder_2000_P2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Intro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Judgment.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MC_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MC_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MC_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MC_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MC_5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Math_Problems_P1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Math_Problems_P2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/MyPage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Personality_Variables.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Results.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Robofer_P1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Robofer_P2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Scenario.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Scenario_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Scenario_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Scenario_4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Task.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Thanks.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion/Training.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/taskdiscretion/tests.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1X7HW8J8GWEGpuHbT4SUrMs6LQh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Tax Disclosure/taxexperiment" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/taskdiscretion/templates/taskdiscretion" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="taskdiscretion_nl" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/taskdiscretion" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/taskdiscretion/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="96b85b20-8778-4837-b424-5a575e5ef666" name="Default Changelist" comment="" />
+      <created>1558338516898</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1558338516898</updated>
+      <workItem from="1558338525109" duration="10829000" />
+      <workItem from="1558356365095" duration="1293000" />
+      <workItem from="1558372002470" duration="10087000" />
+      <workItem from="1558430488750" duration="1348000" />
+      <workItem from="1558431876794" duration="144000" />
+      <workItem from="1558448072134" duration="2577000" />
+      <workItem from="1558451489392" duration="945000" />
+      <workItem from="1558453720098" duration="16000" />
+      <workItem from="1558458265013" duration="298000" />
+      <workItem from="1558463046876" duration="1206000" />
+      <workItem from="1558464982290" duration="590000" />
+      <workItem from="1558466921708" duration="365000" />
+      <workItem from="1558518346990" duration="52000" />
+      <workItem from="1558537675757" duration="320000" />
+      <workItem from="1558590896997" duration="790000" />
+      <workItem from="1558614631496" duration="574000" />
+      <workItem from="1558615609323" duration="1243000" />
+      <workItem from="1558698170991" duration="1185000" />
+      <workItem from="1558900691583" duration="303000" />
+      <workItem from="1558945235085" duration="390000" />
+      <workItem from="1558997301721" duration="291000" />
+      <workItem from="1559047476151" duration="1073000" />
+      <workItem from="1559055794368" duration="319000" />
+      <workItem from="1559064903822" duration="734000" />
+      <workItem from="1559068149272" duration="255000" />
+      <workItem from="1559239488060" duration="1233000" />
+      <workItem from="1559291507523" duration="8810000" />
+      <workItem from="1559722488521" duration="8162000" />
+      <workItem from="1559800524732" duration="5383000" />
+      <workItem from="1560508446776" duration="42000" />
+      <workItem from="1560970538363" duration="20000" />
+      <workItem from="1561132957400" duration="47000" />
+      <workItem from="1561133172958" duration="819000" />
+      <workItem from="1562016023190" duration="537000" />
+      <workItem from="1562139978059" duration="45000" />
+      <workItem from="1562140027866" duration="174000" />
+      <workItem from="1562608636963" duration="1992000" />
+      <workItem from="1562666257007" duration="380000" />
+      <workItem from="1563007233896" duration="603000" />
+      <workItem from="1563054628175" duration="127000" />
+      <workItem from="1563108629035" duration="1804000" />
+      <workItem from="1566290388103" duration="84000" />
+      <workItem from="1567515568136" duration="1519000" />
+      <workItem from="1568796395852" duration="154000" />
+      <workItem from="1568796588998" duration="347000" />
+      <workItem from="1569240736580" duration="18000" />
+      <workItem from="1580390250205" duration="32000" />
+      <workItem from="1580390518321" duration="33000" />
+      <workItem from="1580464672249" duration="5915000" />
+      <workItem from="1586351525480" duration="852000" />
+      <workItem from="1586361665830" duration="16000" />
+      <workItem from="1587581006125" duration="1168000" />
+      <workItem from="1587716521401" duration="611000" />
+      <workItem from="1588156667138" duration="169000" />
+      <workItem from="1590501677463" duration="404000" />
+      <workItem from="1591352440021" duration="12000" />
+      <workItem from="1592051597201" duration="77000" />
+      <workItem from="1605007186527" duration="234000" />
+      <workItem from="1605715556698" duration="757000" />
+      <workItem from="1605726153101" duration="2624000" />
+      <workItem from="1605802864513" duration="829000" />
+      <workItem from="1606299460510" duration="102000" />
+      <workItem from="1606300019010" duration="497000" />
+      <workItem from="1606300826940" duration="861000" />
+      <workItem from="1606383653387" duration="797000" />
+      <workItem from="1606483062536" duration="937000" />
+      <workItem from="1606908037694" duration="1059000" />
+      <workItem from="1606910364339" duration="5150000" />
+      <workItem from="1607944210173" duration="2390000" />
+      <workItem from="1608126527905" duration="2608000" />
+      <workItem from="1610537770555" duration="4803000" />
+      <workItem from="1613382612352" duration="1089000" />
+      <workItem from="1621511568599" duration="737000" />
+      <workItem from="1621528035683" duration="82000" />
+      <workItem from="1621584164755" duration="3255000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="781" y="162" key="SettingsEditor" timestamp="1605726665540">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="781" y="162" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1605726665540" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/taskdiscretion_nl$models.coverage" NAME="models Coverage Results" MODIFIED="1558341360266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/taskdiscretion" />
+  </component>
+</project>

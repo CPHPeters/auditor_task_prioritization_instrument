@@ -1,0 +1,26 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="text-align:center">
+        Please answer the questions below based on your experiences and feelings during the execution of the audit tasks.
+        The audit tasks refer specifically to the IPE tasks of the Robofer and Feeder 2000 patents.
+</div>
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            <td>{{ field }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<hr/>
+
+    {% next_button %}
+
+{% endblock %}

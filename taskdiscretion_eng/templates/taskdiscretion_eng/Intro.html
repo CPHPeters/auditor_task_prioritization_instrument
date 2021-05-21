@@ -1,0 +1,56 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Introduction
+{% endblock %}
+
+{% block content %}
+<div class="instructions">
+<p> Thank you for participating in this study. This study is part of the research program of the Department of Accountancy
+    of Tilburg University. By participating in this study, you contribute to this research program and auditing research
+    in the Netherlands. With this research we hope to gain more insights in auditors' judgments and decision-making.</p>
+    <br/>
+    <p> During this study you will be asked to complete some tasks. The study will approximately take <b>30 minutes</b>.
+        If you complete the study, you will receive an e-mail through which you are able to receive <b>€10,-</b>.</p> <br/>
+    <ul>
+        <li>
+            Please read all information carefully and be aware that you cannot go back to previous screens.
+        </li>
+        <li>
+            During the study it is important that you do not communicate with other participants or look at other
+            participants' screens.
+        </li>
+        <li>
+            Please note that data will only be used for this research study. Data gathered
+            through this study will not be shared with anyone outside of the research team.
+        </li>
+        <li>
+            There is no psychological discomfort, physical discomfort, or any deception in this study.
+        </li>
+        <li>
+            Participation is completely voluntary and you are able to quit the experiment at any time. Please note that
+            by quitting you forfeit your rights to payment.
+        </li>
+        <li>
+            During this study you will conduct audit tasks for a hypothetical firm, please conduct the tasks based on
+            the information that is given to you on the next screens. Please do the tasks as if you would while working
+            on a real audit engagement.
+        </li>
+    </ul>
+
+</div>
+
+    <br/>
+        {% formfield player.name_PO %}
+    <br/>
+
+{% formfield player.accept_conditions label="<b>I understand abovementioned conditions and accept these.</b>" %}
+
+<br/>
+
+<button class="btn btn-primary btn-large">
+    Yes, I would like to participate in this study.
+</button>
+
+{% endblock %}

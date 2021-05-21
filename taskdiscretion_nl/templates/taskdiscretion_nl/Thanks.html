@@ -1,0 +1,21 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Hartelijk bedankt voor jouw participatie!
+{% endblock %}
+
+{% block content %}
+
+<p>We willen je heel hartelijk bedanken voor jouw deelname aan dit experiment. Door deel te nemen draag je bij aan
+    auditing onderzoek aan de Universiteit van Tilburg. Binnen een week ontvang je een e-mail waarin je wordt gevraagd
+    om betalingsgegevens waarnaar we het bedrag kunnen overschrijven. Na dit ingevuld te hebben zal het bedrag binnen
+    drie weken op jouw rekening worden overgeschreven.</p>
+
+{% formfields %}
+
+<button class="btn btn-primary btn-large">
+    Beëindig Studie
+</button>
+
+{% endblock %}

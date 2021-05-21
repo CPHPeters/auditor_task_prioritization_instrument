@@ -1,0 +1,46 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+   <p>
+        In December 2017, Agrifirm acquired another animal feed producer, named Breecorp. Since the purchase price
+        exceeded the value of the net identifiable assets of Breecorp, Agrifirm recorded goodwill in their books at
+        fair value. <br/>
+        <br/>
+        Part of these acquisition were two patents. These patents are related to the design and the development of
+        two agricultural machines – <i>Feeder 2000</i> en <i>Robofer</i> - that improve the transformation of wheat in
+        animal feed significantly. The patents give Agrifirm the right to exclude other parties from commercial exploitation
+        of the development for a period of eight years (2018-2025). Both machines are not used and exploited by Agrifirm,
+        but instead Agrifirm signed an agreement that transfers the exclusive rights to use and produce the machines
+        to CMG Machines. In return, Agrifirm receives royalty payments that are based on a percentage of the
+        machine-specific revenues made by CMG Machines. The patents are recorded against fair value. <br/>
+        <br/>
+        The audit of these patents will be conducted by you. {% if player.treat in Constants.odd %}In this audit
+        team you had a lot of control over the way in which you conducted the previous audit tasks. Therefore, you can use the
+        insights from the previous tasks in deciding how to conduct future audit tasks.
+        {% else %}
+        In this audit
+        team you had no control over the way in which you conducted the previous audit tasks. Therefore, you cannot use the
+        insights from the previous tasks in deciding how to conduct future audit tasks. {% endif %}
+        <br/>
+        <br/>
+        <i>Below you can see a figure that describes the transaction:</i>
+    </p>
+
+
+<div align="center">
+<img height="420" src="{% static 'flowchart_experiment.png' %}" alt="Flowchart"/>
+</div>
+
+<div class="instructions">
+    {% formfields %}
+</div>
+
+{% next_button %}
+
+{% endblock %}
+

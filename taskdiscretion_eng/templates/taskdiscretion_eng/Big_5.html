@@ -1,0 +1,27 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="text-align:center">
+        Below you can find a number of personality traits that may or may not apply to you. You are asked to evaluate
+        for every statement to what extent the personality trait is applicable to you,
+        even if one of the traits is more applicable than the other.
+</div>
+<table class="table">
+    {% for field in form %}
+        <tr>
+            <th>{{ field.label }}</th>
+            <td>{{ field }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<hr/>
+
+    {% next_button %}
+
+{% endblock %}

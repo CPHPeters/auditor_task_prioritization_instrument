@@ -1,0 +1,19 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p> Op de volgende pagina, vind je de Discounted Cash Flow modellen die worden gebruikt voor het bepalen van de fair
+    value estimates van de twee patenten. De engagement partner en Agrifirm's CFO zijn overeengekomen dat de percentages
+    die gebruikt worden door Agrifirm voor het groeipercentage (growth rate) en het royaltypercentage (royalty rate)
+    geschikt zijn. Het groeipercentage reflecteert de groei van de machine-specifieke omzet van CMG Machines over de
+    levensduur van de patenten en neemt de machine-specifieke omzet in 2018 als het basisjaar. Je hebt {%  if player.treat > 2 %}vijf{% else %}drie{% endif %} minuten om
+    je vertrouwd te maken met de modellen alvorens je aan de taken begint. {% if player.treat > 2 %}Dit zou voldoende tijd moeten zijn.{% endif %}
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

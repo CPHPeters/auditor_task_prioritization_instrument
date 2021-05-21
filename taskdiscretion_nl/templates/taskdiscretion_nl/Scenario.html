@@ -1,0 +1,38 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Context
+{% endblock %}
+
+{% block content %}
+
+<div>
+    <p>
+        Je bent een auditor en jouw accountantskantoor, Roger & Johnson, is ingeschakeld om de jaarlijkse audit van
+        Agrifirm uit te voeren voor het einde van het boekjaar, 31 December 2019. Agrifirm is een internationaal publiek
+        bedrijf dat opereert in de landbouwindustrie en specialiseert in de productie van diervoeder.
+
+        In de huidige audit engagement, heeft de engagement partner jou de verantwoordelijkheid gegeven voor de audit
+        van twee fair value estimates van patenten die toebehoren aan Agrifirm. Naast de audit van deze twee fair value
+        estimates, werk je ook aan andere audit taken.
+        <br/>
+        <br/>
+        {% if player.treat in Constants.odd %}Je werkt in een audit team waarin betrokkenheid bij de audit taken als
+        een belangrijke waarde wordt beschouwd. Aan het einde van engagements in dit team voelt jouw bijdrage dan ook
+        echt als jouw werk. {% else %}Je werkt in een audit team
+        waarin betrokkenheid bij de audit taken als totaal onbelangrijk wordt beschouwd. Aan het einde van audit
+        engagements in dit team voelt jouw bijdrage dan ook niet als jouw werk.{% endif %}
+
+        {% if player.treat in Constants.odd %}Tijdens evaluaties van audit engagements met deze teamleider wordt er
+        dan ook voldoende aandacht besteed aan de mate waarin je je betrokken voelt bij de audit taken. {% else %}Tijdens
+        evaluaties van audit engagements met deze teamleider wordt er nooit aandacht besteed aan de mate waarin je je
+        betrokken voelt bij de audit taken.
+        {% endif %}
+    </p>
+
+</div>
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Demographic Information
+{% endblock %}
+
+{% block content %}
+
+{% formfield player.Age %}
+
+{% formfield player.Gender %}
+
+{% formfield player.WorkExp %}
+
+{% formfield player.Big4_question %}
+
+{% formfield player.SNR %}
+
+<hr>
+        {% next_button %}
+<hr>
+{% endblock %}

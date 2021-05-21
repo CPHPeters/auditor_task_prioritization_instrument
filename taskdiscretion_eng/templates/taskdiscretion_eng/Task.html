@@ -1,0 +1,66 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p> It is your task to verify that the two DCF models produce a reliable fair value estimate, given the
+    parameters used by Agrifirm. Because the DCF models are Information Provided by Entity (IPE), it has to be audited
+    whether the DCF models used by Agrifirm produce an accurate and reliable output.
+    {% if player.treat in Constants.odd %}These tasks are regarded by the audit team as your contribution to the audit
+    engagement. {% else %}These audit tasks are regarded by the audit team as a part of the audit engagement.{% endif %}
+</p>
+
+    <p> Part of these tasks is to document why these patents should be valued using fair value. This documentation will
+        be part of both audit tasks and will be added to the audit file of both tasks.
+    {% if player.treat in Constants.odd %}
+    The audit team leader grants you all control and freedom over how you document this.
+    {% else %}The audit team leader has prepared a documentation and asks you to fully and literally copy his documentation.
+        This documentation is as follows:<i> "Because of an acquisition conducted by Agrifirm, Agrifirm obtained two patents.
+    These patents give Agrifirm the right to exclude other parties from the use and exploitation of two agricultural
+    machines. However, Agrifirm does not exploit these patents but instead has an agreement with a third
+    party, CMG Machines. This agreement grants CMG Machines the exclusive right to produce and use the machines.
+    CMG Machines pays royalty payments based on the machine-specific revenues to Agrifirm. Hence,
+    Agrifirm can value these patents using fair value. - John Jansen, Manager Roger & Johnson"</i>{% endif %}
+    </p>
+
+    {% if player.treat in Constants.odd %}
+    <p>Please attach the documentation below:</p>
+    {% else %}
+    <p>Please attach the reasoning of the team leader below:</p>
+    {% endif %}
+
+    {% formfield player.documentatie %}
+
+    {% if player.treat in Constants.odd %} Documentation written by: {{ player.name_PO }} {% endif %}
+
+
+
+    {% next_button %}
+
+{% if player.treat in Constants.odd %}
+<input type="hidden" name="summary_figure" value="" id="id_summary_figure"/>
+
+<div class="container">
+  <button style="color: rgb(255,255,255); background-color: rgb(255,3,0); border-color: rgb(255,3,0)" type="button" class="btn btn-info" data-toggle="collapse" id="buttons" data-target="#demo">Click here to see a summary of the transaction.</button>
+  <div id="demo" class="collapse">
+      <div align="center">
+            <img height="420" src="{% static 'global\flowchart_experiment.png' %}"/>
+      </div>
+  </div>
+</div>
+  <br/>
+    <hr>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#buttons').click(function() {
+            $('#id_summary_figure').val(1);
+        });
+    </script>
+{% endblock %}

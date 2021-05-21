@@ -1,0 +1,19 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+<p> On the next page, you find the Discounted Cash Flow models that are used to determine the fair
+    value estimates of the two patents. De engagement partner and Agrifirm's CFO have agreed that the percentages
+    that are used by Agrifirm for the growth rate and the royalty rate are appropriate. The growth rate reflects the
+    expected growth of the machine-specific revenues of CMG Machines during the lifetime of the patents and takes the
+    machine-specific revenues in 2018 as the base year. You have {%  if player.treat > 2 %}five{% else %}three{% endif %} minutes to
+    make yourself familiar with the models before you start executing the tasks. {% if player.treat > 2 %}This should be sufficient time.{% endif %}
+    </p>
+
+    {% next_button %}
+
+{% endblock %}

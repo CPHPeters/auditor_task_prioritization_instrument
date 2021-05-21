@@ -1,0 +1,89 @@
+{% extends "taskdiscretion_eng/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Audit of the Feeder 2000 Patent
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="height: 200px;">
+<p> To verify the accuracy and reliability of the DCF model, you are asked to do the following:
+    <ul>
+        <li>Fill in the numbers of the cells (e.g., B2) in which you think Agrifirm made a mistake in the textbox below the spreadsheet.</li>
+        <li>Fill in the fair value amount that in your opinion reflect the value of the patent most accurately, given
+            the input parameters. You can change formulas in the model that you do not consider to be correct by editing them in the spreadsheet.
+        The fair value amount will be adjusted in the spreadsheet subsequently. </li>
+    </ul>
+</p>
+</div>
+
+<div align="center" style="margin-left: -11%;">
+    <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216020&authkey=%21AM4GctG6GOf4eeY&em=2&AllowTyping=True&ActiveCell='Audit of the Feeder 2000 Patent'!A1&Item='Audit of the Feeder 2000 Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+</div>
+
+{% formfield player.mistakes_feeder %}
+
+{% formfield player.feeder_estimate %}
+
+    <button name="feeder2000first" value="True" class="btn btn-primary btn-large">Finish the audit.</button>
+
+<input type="hidden" name="screenshot_feeder" value="" id="id_screenshot_feeder"/>
+
+<div class="container">
+  <button style="color: rgb(255,255,255); background-color: rgb(255,3,0); border-color: rgb(255,3,0)" type="button" class="btn btn-info" data-toggle="collapse" id="buttonf" data-target="#demo">Click here if you are not able to see the spreadsheets well.</button>
+  <div id="demo" class="collapse">
+    <p>
+      <div align="center">
+            <img width="125%" src="{% static 'global\Feeder_judg.png' %}"/>
+      </div>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#buttonf').click(function() {
+            $('#id_screenshot_feeder').val(1);
+        });
+    </script>
+
+{#{% if player.treat > 2 %}#}
+{##}
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 60) {
+                    $('.otree-timer').show();
+                }
+            });
+        });
+    </script>
+{##}
+{#{% endif %}#}
+
+{% endblock %}
+
+{% block app_styles %}
+    {% if player.treat < 3 %}
+    <style>
+        .otree-timer{
+            position: relative;
+            top: 225px;
+        }
+        .instructions{
+            position: relative;
+            bottom: 100px;
+        }
+    </style>
+    {% endif %}
+{##}
+{% if player.treat > 2 %}
+    <style>
+        .otree-timer {
+            display: none;
+        }
+    </style>
+{% endif %}
+{% endblock %}

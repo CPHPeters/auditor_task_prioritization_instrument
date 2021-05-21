@@ -1,0 +1,90 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Audit van het Feeder 2000 Patent
+{% endblock %}
+
+{% block content %}
+
+<div class="instructions" style="height: 200px;">
+<p> Om de betrouwbaarheid en juistheid van dit DCF model vast te stellen, word je gevraagd om het volgende te doen:
+    <ul>
+        <li>Vul de celnummers (e.g., B2) in waarin je denkt dat Agrifirm een fout heeft gemaakt in het tekstvak onder de spreadsheet.</li>
+        <li>Vul het fair value bedrag in dat naar jouw idee het meest accuraat de waarde van het patent omschrijft gegeven
+            de input parameters. Formules in het model die jij niet correct acht kun je aanpassen in de spreadsheet.
+        Het fair value bedrag zal dan aangepast worden in de spreadsheet. </li>
+    </ul>
+</p>
+</div>
+
+<div align="center" style="margin-left: -11%;">
+    <iframe width="125%" height="430" frameborder="0" scrolling="no" src="https://onedrive.live.com/embed?resid=2FB8EDA965ED41FA%216020&authkey=%21AM4GctG6GOf4eeY&em=2&AllowTyping=True&ActiveCell='Audit of the Feeder 2000 Patent'!A1&Item='Audit of the Feeder 2000 Patent'!A1:I19&wdInConfigurator=True&waccluster=NL3"></iframe>
+</div>
+
+{% formfield player.mistakes_feeder %}
+
+{% formfield player.feeder_estimate %}
+
+    <button name="feeder2000first" value="True" class="btn btn-primary btn-large">Beëindig de Audit.</button>
+
+<input type="hidden" name="screenshot_feeder" value="" id="id_screenshot_feeder"/>
+
+<div class="container">
+  <button style="color: rgb(255,255,255); background-color: rgb(255,3,0); border-color: rgb(255,3,0)" type="button" class="btn btn-info" data-toggle="collapse" id="buttonf" data-target="#demo">Klik hier als je de spreadsheets niet (goed) kunt zien.</button>
+  <div id="demo" class="collapse">
+    <p>
+      <div align="center">
+            <img width="125%" src="{% static 'Feeder_judg.png' %}"/>
+      </div>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    <script>
+        $('#buttonf').click(function() {
+            $('#id_screenshot_feeder').val(1);
+        });
+    </script>
+
+{% if player.treat > 2 %}
+{##}
+    <script>
+        $(function () {
+            $('.otree-timer__time-left').on('update.countdown', function (event) {
+                if (event.offset.totalSeconds === 60) {
+                    $('.otree-timer').show();
+                }
+            });
+        });
+    </script>
+{##}
+{% endif %}
+
+{% endblock %}
+
+{% block app_styles %}
+    {% if player.treat < 3 %}
+    <style>
+        .otree-timer{
+            position: relative;
+            top: 225px;
+        }
+        .instructions{
+            position: relative;
+            bottom: 100px;
+        }
+    </style>
+    {% endif %}
+{##}
+{% if player.treat > 2 %}
+    <style>
+        .otree-timer {
+            display: none;
+        }
+    </style>
+{% endif %}
+
+{% endblock %}

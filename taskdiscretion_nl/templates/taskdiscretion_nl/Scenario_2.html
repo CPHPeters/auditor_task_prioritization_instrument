@@ -1,0 +1,47 @@
+{% extends "taskdiscretion_nl/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        In December 2017, heeft Agrifirm een andere onderneming, genaamd Breecorp, overgenomen. Omdat het overnamebedrag
+        groter was dan de waarde van de netto identificeerbare activa van Breecorp, heeft Agrifirm goodwill in haar
+        boeken opgenomen.<br/>
+        <br/>
+        Ook een onderdeel van de overname waren twee patenten. Deze patenten omvatten het design en de ontwikkeling van
+        twee landbouwmachines – <i>Feeder 2000</i> en <i>Robofer</i> - die de transformatie van granen in voer
+        aanzienlijk verbeteren. De patenten geven Agrifirm het recht om andere bedrijven uit te sluiten van commerciële
+        exploitatie van de uitvindingen voor een periode van acht jaar (2018-2025). Beide machines worden niet door
+        Agrifirm zelf geëxploiteerd maar in plaats daarvan is er een overeenkomst gemaakt die de exclusieve rechten om
+        de machines te produceren en gebruiken verleent aan CMG Machines. In ruil ontvangt Agrifirm royaltybetalingen
+        die gelijk zijn aan een percentage van de machine-specifieke omzet die gemaakt wordt door CMG Machines. De
+        patenten worden gewaardeerd tegen reële waarde. <br/>
+        <br/>
+        De audit van deze patenten zal door jou worden uitgevoerd. {% if player.treat in Constants.odd %}In dit audit
+        team had je bij de vorige taken veel inspraak over de manier waarop de audit taken worden aangepakt. Je kunt de
+        inzichten die eerder hebt opgedaan in dit team dan ook gebruiken om te beslissen hoe je audit taken uitvoert.
+        {% else %}
+        In dit audit team had je bij de vorige taken geen inspraak over de manier waarop de audit taken worden aangepakt.
+        Je kunt de inzichten die je eerder hebt opgedaan in dit team dan ook niet gebruiken om te beslissen hoe je audit
+        taken uitvoert. {% endif %}
+        <br/>
+        <br/>
+        <i>Hier onder zie je een figuur die de transactie beschrijft.</i>
+    </p>
+
+
+<div align="center">
+<img height="420" src="{% static 'flowchart_experiment_nl.png' %}"/>
+</div>
+
+<div class="instructions">
+    {% formfields %}
+</div>
+
+{% next_button %}
+
+{% endblock %}
+
