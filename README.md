@@ -22,4 +22,4 @@ Dierynck, Bart and Peters, Christian P. H. (2021) Auditor Task Prioritization: T
 
 ## Further Reading
 
-I wrote a blog post on [Accounting Experiments](https://www.accountingexperiments.com/) where I explain how to embed Excel spreadsheets in your experiment.
+I wrote a blog post on [Accounting Experiments](https://www.accountingexperiments.com/post/spreadsheets/) where I explain how to embed Excel spreadsheets in your experiment.
